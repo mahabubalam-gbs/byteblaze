@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import wave from '../assets/wave.svg'
+
 
 const Hero = () => {
     return (
