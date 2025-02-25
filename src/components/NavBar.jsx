@@ -14,7 +14,7 @@ const NavBar = () => {
     const handleThemeToggle = (e) => {
 
         if (e.target.checked) {
-            setTheme('dark')
+            setTheme('synthwave')
         } else {
             setTheme('light')
         }
