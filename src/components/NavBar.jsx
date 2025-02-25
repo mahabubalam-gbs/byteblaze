@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 
 const NavBar = () => {
@@ -26,16 +27,48 @@ const NavBar = () => {
                 <a className="btn btn-ghost text- text-secondary gap-0 text-2xl font-bold">Byte <span className="text-primary">Blaze</span></a>
             </div>
             <div className="flex-none">
-                <ul className="menu menu-horizontal px-1">
-                    <li className="font-bold"><a>Home</a></li>
-                    <li className="font-bold text-primary"><a>Blogs</a></li>
-                    <li className="font-bold"><a>Bookmarks</a></li>
+                <ul className="menu menu-horizontal px-1 gap-1">
+
+                    <li>
+                        <NavLink to='/' style={
+                            ({ isActive }) => {
+                                return {
+                                    color: isActive ? '' : ''
+                                }
+                            }
+                        }>
+                            Home
+                        </NavLink>
+                    </li>
+
+
+                    <li>
+                        <NavLink to='/blogs' style={
+                            ({ isActive }) => {
+                                return {
+                                    color: isActive ? '' : ''
+                                }
+                            }
+                        }>Blogs</NavLink>
+                    </li>
+
+
+                    <li>
+                        <NavLink to='/bookmarks' style={
+                            ({ isActive }) => {
+                                return {
+                                    color: isActive ? '' : ''
+                                }
+                            }
+                        }>Bookmarks</NavLink>
+                    </li>
+
                 </ul>
+
                 <label className="grid cursor-pointer place-items-center">
                     <input
                         onChange={handleThemeToggle}
                         type="checkbox"
-                        // value="synthwave"
                         className="toggle theme-controller bg-base-content col-span-2 col-start-1 row-start-1" />
                     <svg
                         className="stroke-base-100 fill-base-100 col-start-1 row-start-1"

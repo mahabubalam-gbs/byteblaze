@@ -10,6 +10,7 @@ export default {
       //   'primary': '#4A00FF',
       //   'secondary': '#F723D3'
       // }
+
     },
   },
   plugins: [require('daisyui'),],

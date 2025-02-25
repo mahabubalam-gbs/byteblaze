@@ -1,19 +1,11 @@
-import NavBar from "../components/NavBar";
-import Footer from '../components/Footer';
-import { Outlet } from "react-router-dom";
-
+import Hero from "../components/Hero";
+import wave from '../assets/wave.svg'
 
 const Home = () => {
     return (
-        <div>
-            {/* NavBar */}
-            <div className="h-16">
-                <NavBar></NavBar>
-            </div>
-            <div>
-                <Outlet></Outlet>
-            </div>
-            <Footer></Footer>
+        <div className="flex flex-col  justify-center min-h-[calc(100vh-116px)] relative">
+            <Hero></Hero>
+            <img className="absolute bottom-0 w-full" src={wave} alt="" />
         </div>
     );
 };
