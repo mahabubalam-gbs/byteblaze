@@ -10,7 +10,7 @@ const BlogDetails = () => {
 
     } = blog;
     return (
-        <div className="max-w-3xl px-6 py-16 mx-auto space-y-12">
+        <div className="max-w-3xl px-6 py-16 mx-auto space-y-12 overflow-hidden">
             <article className="space-y-8 dark:bg-gray-100 dark:text-gray-900">
                 <div className="space-y-6">
                     <h1 className="text-4xl font-bold md:tracking-tight md:text-5xl">{title}</h1>
@@ -23,7 +23,7 @@ const BlogDetails = () => {
 
                     {/* Tabs */}
 
-                    <div className="flex items-center -mx-4 overflow-x-auto overflow-y-hidden sm:justify-start flex-nowrap dark:bg-gray-100 dark:text-gray-800">
+                    <div className="flex items-center  overflow-x-auto overflow-y-hidden sm:justify-start flex-nowrap dark:bg-gray-100 dark:text-gray-800">
                         <Link
                             to=''
                             onClick={() => setTabIndex(0)}
@@ -47,14 +47,7 @@ const BlogDetails = () => {
                 </div>
                 <Outlet></Outlet>
             </article>
-            <div>
-                <div className="flex flex-wrap py-6 gap-2 border-t border-dashed dark:border-gray-600">
-                    <a rel="noopener noreferrer" href="#" className="px-3 py-1 rounded-sm hover:underline dark:bg-violet-600 dark:text-gray-50">#MambaUI</a>
-                    <a rel="noopener noreferrer" href="#" className="px-3 py-1 rounded-sm hover:underline dark:bg-violet-600 dark:text-gray-50">#TailwindCSS</a>
-                    <a rel="noopener noreferrer" href="#" className="px-3 py-1 rounded-sm hover:underline dark:bg-violet-600 dark:text-gray-50">#Angular</a>
-                </div>
 
-            </div>
         </div>
     );
 };
