@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import { Link, Outlet, useLoaderData } from 'react-router-dom';
+import { MdBookmarkAdd } from "react-icons/md";
 
 const BlogDetails = () => {
     const [tabIndex, setTabIndex] = useState(0);
     const blog = useLoaderData();
-    console.log(blog)
-    const { title, published_at, reading_time_minutes
-        , public_reactions_count, comments_count
+    const { title, published_at, reading_time_minutes, public_reactions_count, comments_count } = blog;
 
-    } = blog;
     return (
         <div className="max-w-3xl px-6 py-16 mx-auto space-y-12 overflow-hidden">
             <article className="space-y-8 dark:bg-gray-100 dark:text-gray-900">
@@ -43,6 +41,9 @@ const BlogDetails = () => {
                             </svg>
                             <span>Author</span>
                         </Link>
+
+                        {/* Bookmark Button */}
+                        <MdBookmarkAdd />
                     </div>
                 </div>
                 <Outlet></Outlet>
