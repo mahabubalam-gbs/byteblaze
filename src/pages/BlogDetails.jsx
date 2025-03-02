@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
 import { Link, Outlet, useLoaderData } from 'react-router-dom';
 import { MdBookmarkAdd } from "react-icons/md";
+import { saveBlogsToLS } from '../Utils/handleLS';
 
 const BlogDetails = () => {
     const [tabIndex, setTabIndex] = useState(0);
     const blog = useLoaderData();
-    const { title, published_at, reading_time_minutes, public_reactions_count, comments_count } = blog;
+    const { id, title, published_at, reading_time_minutes, public_reactions_count, comments_count } = blog;
 
+    const handleBookmark = (blog) => {
+        console.log(blog);
+        saveBlogsToLS(blog)
+
+    }
     return (
         <div className="max-w-3xl px-6 py-16 mx-auto space-y-12 overflow-hidden">
             <article className="space-y-8 dark:bg-gray-100 dark:text-gray-900">
@@ -43,7 +49,11 @@ const BlogDetails = () => {
                         </Link>
 
                         {/* Bookmark Button */}
-                        <MdBookmarkAdd />
+                        <div
+                            onClick={() => handleBookmark(blog)}
+                            className='bg-primary p-3 rounded-full ml-5 hover:bg-opacity-30 hover:scale-105 bg-opacity-20 cursor-pointer overflow-hidden'>
+                            <MdBookmarkAdd size={20} className='text-secondary' />
+                        </div>
                     </div>
                 </div>
                 <Outlet></Outlet>
