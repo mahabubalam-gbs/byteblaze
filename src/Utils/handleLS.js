@@ -6,6 +6,7 @@ const getStoredBlogs = () => {
     const storedBlogs = localStorage.getItem('blog-list');
     if (storedBlogs) {
         blogs = JSON.parse(storedBlogs);
+        return blogs;
     }
     return blogs;
 }
@@ -27,4 +28,13 @@ const saveBlogsToLS = (blog) => {
     toast.success('Blog Bookmarked  successfully')
 }
 
-export { getStoredBlogs, saveBlogsToLS }
+// delete blog from LS
+
+const deleteBlog = (id) => {
+    let blogs = getStoredBlogs();
+    const remainingBlogs = blogs.filter(storedBlog => storedBlog.id !== id);
+    localStorage.setItem('blog-list', JSON.stringify(remainingBlogs))
+    toast.success('Blog Removed from Bookmark')
+}
+
+export { getStoredBlogs, saveBlogsToLS, deleteBlog }

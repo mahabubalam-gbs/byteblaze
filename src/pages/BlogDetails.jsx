@@ -6,10 +6,9 @@ import { saveBlogsToLS } from '../Utils/handleLS';
 const BlogDetails = () => {
     const [tabIndex, setTabIndex] = useState(0);
     const blog = useLoaderData();
-    const { id, title, published_at, reading_time_minutes, public_reactions_count, comments_count } = blog;
+    const { title, published_at, reading_time_minutes, public_reactions_count, comments_count } = blog;
 
     const handleBookmark = (blog) => {
-        console.log(blog);
         saveBlogsToLS(blog)
 
     }
