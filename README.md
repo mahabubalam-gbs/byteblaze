@@ -2,7 +2,7 @@
 
 Live site:
 
-- [ByteBlaze](https://byte-blaze.netlify.app/)
+- [ByteBlaze](https://shimmering-tiramisu-feacc4.netlify.app/)
 
 Resources:
 
