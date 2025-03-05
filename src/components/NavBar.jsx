@@ -22,9 +22,9 @@ const NavBar = () => {
 
     return (
 
-        <div className="navbar bg-base-100 px-4 sm:px-8 md:px-12 shadow-lg fixed z-10">
+        <div className="navbar bg-base-100 px-0 sm:px-8 md:px-12 shadow-lg fixed z-10">
             <div className="flex-1">
-                <a className="btn btn-ghost text- text-secondary gap-0 text-2xl font-bold">Byte <span className="text-primary">Blaze</span></a>
+                <a className="btn btn-ghost text- text-secondary gap-0  text-lg sm:text-2xl font-bold">Byte <span className="text-primary">Blaze</span></a>
             </div>
             <div className="flex-none">
                 <ul className="menu menu-horizontal px-1 gap-1">

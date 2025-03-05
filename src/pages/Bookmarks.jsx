@@ -20,10 +20,12 @@ const Bookmarks = () => {
     }
     if (blogs.length < 1) return <EmptyState message={'No Bookmarks Found'} address={'/blogs'} label={'Browse Blogs'}></EmptyState>
     return (
-        <div className="container max-w-6xl py-12 gap-12 mx-auto  grid justify-center grid-cols-1  sm:grid-cols-2 lg:grid-cols-3">
-            {
-                blogs.map(blog => <BlogCard handleBlogDelete={handleBlogDelete} deletable={true} key={blog.id} blog={blog}></BlogCard>)
-            }
+        <div className="container max-w-7xl p-6 mx-auto space-y-6 sm:space-y-12 py-12">
+            <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {
+                    blogs.map(blog => <BlogCard handleBlogDelete={handleBlogDelete} deletable={true} key={blog.id} blog={blog}></BlogCard>)
+                }
+            </div>
         </div>
     );
 };
