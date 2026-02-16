@@ -21,3 +21,4 @@ Resources:
 - [TailwindCSS](https://tailwindcss.com/)
 
 ![Home Page](src/assets/home-page.png)
+![Blog Page](src/assets/blog-page.png)
