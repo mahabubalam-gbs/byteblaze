@@ -1,4 +1,27 @@
-# Byteblaze
+## 🚀 ByteBlaze – Developer Blog Platform
+
+ByteBlaze is a modern and responsive blog platform where users can explore and read developer blogs fetched from the Dev.to API. The project focuses on clean UI, smooth navigation, and an engaging reading experience using modern React tools and Tailwind-based components.
+
+With dynamic routing, markdown rendering, and interactive UI elements, ByteBlaze provides a simple yet powerful way to browse developer content.
+
+
+# ✨ Features
+
+📚 Browse and read blogs from the Dev.to API
+
+⚡ Fast navigation using React Router
+
+🎨 Modern UI built with TailwindCSS, DaisyUI, and Mamba UI
+
+📝 Markdown blog rendering with React-Markdown
+
+🔔 Toast notifications for user feedback
+
+⏳ Loading spinners for better UX
+
+🔖 Bookmark support for saving blogs
+
+📱 Fully responsive design
 
 Live site:
 
